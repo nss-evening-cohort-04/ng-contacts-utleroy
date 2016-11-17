@@ -1,0 +1,20 @@
+{
+	"people":{
+		
+		"p0":{
+			"firstName":"Lee",
+			"lastName":"Hankins",
+			"phoneNumber": "616-616-1616"
+		},
+		"p1":{
+			"firstName":"notLee",
+			"lastName":"notHankins",
+			"phoneNumber": "123-456-7890"
+		},
+		"p2":{
+			"firstName":"Jimmy",
+			"lastName":"John",
+			"phoneNumber": "098-765-4321"
+		}
+	}
+}
