@@ -13,7 +13,7 @@
 	<!-- page container -->
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-6">
 
 				<!-- navbar area -->
 				<nav class="navbar navbar-default" role="navigation">
@@ -67,20 +67,20 @@
 					<!-- contacts to add   -->
 
 					<!-- existing contacts -->
-					<div ng-repeat="person in people"></div>
 					<div class="page-header">
 						<h1>Your Contacts</h1>
-						<div class="panel panel-default">          
-							<div class="panel-body">          
-								<div class="col-xs-1"></div>          
-								<div class="col-xs-9">{{person.firstName}}</div>          
-								<div class="col-xs-1">{{person.lastName}}</div>          
-								<div class="col-xs-1">
-									<button class="btn btn-danger fa fa-trash-o"></button>
+						<div class="panel panel-default" ng-repeat="person in people">          
+							<div class="panel-body">
+								<div class="col-xs-1">{{person.firstName}}</div>          
+								<div class="col-xs-2">{{person.lastName}}</div>         
+								<div class="col-xs-3">{{person.phoneNumber}}</div>      
+								<div class="col-xs-6">          
+									<button class="btn btn-danger fa fa-trash-o navbar-right"></button>
 								</div>          
 							</div>
 						</div>
 					</div>
+				
 
 					<!-- existing contacts -->
 

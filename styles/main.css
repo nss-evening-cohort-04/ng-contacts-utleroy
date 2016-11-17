@@ -1,2 +1,5 @@
 body {
   background-color: lightgrey; }
+
+.col-md-6 {
+  margin: auto; }
