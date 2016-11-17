@@ -8,14 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
-<body>
+<body ng-app="ContactApp">
 
-<!-- page container -->
+	<!-- page container -->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 
-<!-- navbar area -->
+				<!-- navbar area -->
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,10 +38,10 @@
 						</ul>
 					</div>
 				</nav>
-<!-- navbar area -->
+				<!-- navbar area -->
 
-<!-- contacts to add -->
-				<div class="page-header">
+				<!-- contacts to add -->
+				<div class="page-header" ng-controller="ContactCtrl">
 					<h1>Add new contact</h1>
 					<div class="container-fluid">
 						<div class="row">
@@ -64,35 +64,43 @@
 							</div>
 						</div>
 					</div>
+					<!-- contacts to add   -->
+
+					<!-- existing contacts -->
+					<div ng-repeat="person in people"></div>
+					<div class="page-header">
+						<h1>Your Contacts</h1>
+						<div class="panel panel-default">          
+							<div class="panel-body">          
+								<div class="col-xs-1"></div>          
+								<div class="col-xs-9">{{person.firstName}}</div>          
+								<div class="col-xs-1">{{person.lastName}}</div>          
+								<div class="col-xs-1">
+									<button class="btn btn-danger fa fa-trash-o"></button>
+								</div>          
+							</div>
+						</div>
+					</div>
+
+					<!-- existing contacts -->
+
 				</div>
- <!-- contacts to add   -->
-
- <!-- existing contacts -->
-<div class="page-header">
-	<h1>Your Contacts</h1>
-</div>
-
-
-
-
-
-
-
-
-
- <!-- existing contacts -->
-
 			</div>
 		</div>
 	</div>
-<!-- page container -->
+	<!-- page container -->
 
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 
 	<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 	<script src="/javascripts/app.js"></script>
+	<script src="/javascripts/AppConstants.js"></script>
+	<script src="/javascripts/AppConfig.js"></script>
+	<script src="/javascripts/controllers/ContactCtrl.js"></script>
+	<script src="/javascripts/factories/PeopleFactory.js"></script>
 
 </body>
 </html>
