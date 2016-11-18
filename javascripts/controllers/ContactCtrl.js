@@ -27,4 +27,14 @@ app.controller("ContactCtrl", function($scope, PeopleFactory) {
 			$scope.showListView = true;	
 		});
 	};
+
+	$scope.deleteContact = function(personId){
+		console.log("delete clicked");
+		PeopleFactory.deletePerson(personId).then(function(response){
+			PeopleFactory.getPeople().then(function(peopleList){
+				$scope.people = peopleList;
+			});
+		});
+	};
+
 });
