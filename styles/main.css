@@ -1,5 +1,5 @@
 body {
   background-color: lightgrey; }
 
-.col-md-6 {
-  margin: auto; }
+.container-fluid {
+  max-width: 600px; }
