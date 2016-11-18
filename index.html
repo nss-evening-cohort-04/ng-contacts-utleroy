@@ -40,8 +40,8 @@
 				<!-- navbar area -->
 
 				<!-- contacts to add -->
-				<div class="page-header" ng-controller="ContactCtrl">
-					<h1>Add new contact</h1>
+				<div ng-controller="ContactCtrl">
+					<h3>Add new contact</h3>
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-12">
@@ -66,12 +66,12 @@
 					<!-- contacts to add   -->
 
 					<!-- existing contacts -->
-					
+					<h3>Contacts</h3>
 					<div class="container-fluid center-block">
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-12 push">
 								<div class="panel-group">
-									<div class="panel panel-default" ng-repeat="person in people">
+									<div class="panel panel-default styled" ng-repeat="person in people">
 										<div class="panel-heading">
 											{{person.firstName}} {{person.lastName}}
 										</div>

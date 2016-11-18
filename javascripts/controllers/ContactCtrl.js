@@ -19,7 +19,7 @@ app.controller("ContactCtrl", function($scope, PeopleFactory) {
 
 	};
 
-	$scope.addNewPerson = function(){
+	$scope.addNewPerson = function(listPerson){
 		$scope.newContact.isCompleted = false;
 		PeopleFactory.postNewPerson($scope.newContact).then(function(personId){
 			getPeople();
