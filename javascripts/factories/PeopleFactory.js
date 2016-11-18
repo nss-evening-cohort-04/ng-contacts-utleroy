@@ -20,5 +20,23 @@ app.factory("PeopleFactory", function($q, $http, FIREBASE_CONFIG) {
 		});
 
 	};
-	return {getItemList:getItemList};
+
+	var postNewPerson = function(newPerson){
+		return $q((resolve, reject)=>{
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/people.json`, 
+				JSON.stringify({
+				firstName: newPerson.firstName,
+				lastName: newPerson.lastName,
+				phoneNumber: newPerson.phoneNumber
+			})
+			)
+			.success(function(postResponse){
+				resolve(postResponse)
+			})
+			.error(function(postError){
+				reject(postError);
+			});
+		});
+	};
+	return {getItemList:getItemList, postNewPerson:postNewPerson};
 });

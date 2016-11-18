@@ -34,8 +34,7 @@
 							</div> 
 							<button type="submit" class="btn btn-default">Search</button>
 						</form>
-						<ul class="nav navbar-nav navbar-right">
-						</ul>
+
 					</div>
 				</nav>
 				<!-- navbar area -->
@@ -49,17 +48,17 @@
 								<form role="form" class="form-inline">
 									<div class="form-group">
 										<label for="name1"></label>
-										<input type="text" class="form-control" placeholder="First Name"/>
+										<input type="text" class="form-control" placeholder="First Name" ng-model="newContact.firstName"/>
 									</div>
 									<div class="form-group">
 										<label for="name2"></label>
-										<input type="text" class="form-control" placeholder="Last Name"/>
+										<input type="text" class="form-control" placeholder="Last Name" ng-model="newContact.lastName"/>
 									</div>
 									<div class="form-group">
 										<label for="number"></label>
-										<input type="phone" class="form-control" placeholder="Phone Number"/>
+										<input type="phone" class="form-control" placeholder="Phone Number" ng-model="newContact.phoneNumber"/>
 									</div>
-									<button type="submit" class="btn btn-primary">+</button>
+									<button type="submit" class="btn btn-primary" ng-click="addNewPerson()">+</button>
 								</form>
 							</div>
 						</div>
@@ -71,11 +70,11 @@
 						<h1>Your Contacts</h1>
 						<div class="panel panel-default" ng-repeat="person in people">          
 							<div class="panel-body">
-								<div class="col-xs-1">{{person.firstName}}</div>          
+								<div class="col-xs-2">{{person.firstName}}</div>          
 								<div class="col-xs-2">{{person.lastName}}</div>         
-								<div class="col-xs-3">{{person.phoneNumber}}</div>      
-								<div class="col-xs-6">          
 									<button class="btn btn-danger fa fa-trash-o navbar-right"></button>
+								<div class="col-xs-3 navbar-right">{{person.phoneNumber}}</div>      
+								<div class="col-xs-5">          
 								</div>          
 							</div>
 						</div>

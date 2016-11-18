@@ -10,4 +10,21 @@ app.controller("ContactCtrl", function($scope, PeopleFactory) {
 		});
 	}
 	getPeople();
+
+	$scope.allPeople=function(){
+		$scope.showListView = true;
+	};
+	$scope.newPerson=function(){
+		$scope.showListView = false;	
+
+	};
+
+	$scope.addNewPerson = function(){
+		$scope.newContact.isCompleted = false;
+		PeopleFactory.postNewPerson($scope.newContact).then(function(personId){
+			getPeople();
+			$scope.newContact = {};
+			$scope.showListView = true;	
+		});
+	};
 });
