@@ -1,5 +1,6 @@
 body {
-  height: 100%; }
+  height: 1200px;
+  width: 100%; }
 
 #bg-img {
   background: url("../iPhone-bg.png");
@@ -8,12 +9,13 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 100%; }
+  height: 100%;
+  width: auto; }
 
 .styled {
-  margin-top: 6%;
-  margin-left: 38.75%;
-  max-width: 22%; }
+  margin-top: 2%;
+  margin-left: 41.20%;
+  max-width: 17%; }
 
 .push {
   padding-top: 30px; }
