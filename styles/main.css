@@ -1,21 +1,19 @@
 body {
   height: 1200px;
-  width: 100%; }
+  width: 100%;
+  background-color: grey; }
 
 #bg-img {
   background: url("../iPhone-bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   height: 100%;
-  width: auto; }
+  width: auto;
+  margin-left: 450px; }
 
 .styled {
-  margin-top: 2%;
-  margin-left: 41.20%;
-  max-width: 17%; }
+  margin-top: 11%;
+  margin-left: 4%;
+  max-width: 28%; }
 
 .push {
   padding-top: 30px; }
