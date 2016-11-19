@@ -1,23 +1,31 @@
 body {
-	background-color: lightgrey;
+	height: 100%;
 }
 
-.container-fluid{
-	max-width: 700px;
+#bg-img{
+    background: url('../iPhone-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
 }
 
-
-.styled:nth-child(odd){
-	float: right;
-	min-width: 300px;
-}
-
-.styled:nth-child(even){
-	float: left;
-	min-width: 300px;
+.styled{
+	margin-top: 6%;
+	margin-left: 38.75%;
+	max-width: 22%;
 }
 
 .push{
 	padding-top: 30px;
 }
 
+h3 {
+	color: white;
+}
+
+footer {
+	display: fixed;
+}
