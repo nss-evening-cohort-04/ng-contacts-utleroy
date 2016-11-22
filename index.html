@@ -67,24 +67,24 @@
 					<!-- existing contacts -->
 					<h3>Contacts</h3>
 					<div id="bg-img">
-					<div class="container-fluid center-block">
-						<div class="row center-block">
-							<div class="col-md-12 center-block">
-								<div class="panel-group center-block">
-									<div class="panel panel-default styled" ng-repeat="person in people">
-										<div class="panel-heading">
-											{{person.firstName}} {{person.lastName}}
+						<div class="container-fluid center-block">
+							<div class="row center-block">
+								<div class="col-md-12 center-block">
+									<div class="panel-group center-block">
+										<div class="panel panel-default styled" ng-repeat="person in people">
+											<div class="panel-heading">
+												{{person.firstName}} {{person.lastName}}
+											</div>
+											<div class="panel-body">
+												{{person.phoneNumber}}<button class="btn btn-primary navbar-right fa fa-address-book-o"></button><button class="btn btn-danger fa fa-trash-o navbar-right" ng-click="deleteContact(person.personId)">
+											</button>
 										</div>
-										<div class="panel-body">
-											{{person.phoneNumber}}<button class="btn btn-primary navbar-right fa fa-address-book-o"></button><button class="btn btn-danger fa fa-trash-o navbar-right" ng-click="deleteContact(person.personId)">
-										</button>
 									</div>
-								</div>
-							</div>			
+								</div>			
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 
 
@@ -101,13 +101,20 @@
 
 <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script src="/javascripts/app.js"></script>
 <script src="/javascripts/AppConstants.js"></script>
 <script src="/javascripts/AppConfig.js"></script>
-<script src="/javascripts/controllers/ContactCtrl.js"></script>
 <script src="/javascripts/factories/PeopleFactory.js"></script>
+
+<script src="/javascripts/controllers/NavCtrl.js"></script>
+<script src="/javascripts/controllers/UpdateCtrl.js"></script>
+<script src="/javascripts/controllers/ContactCtrl.js"></script>
+<script src="/javascripts/controllers/EditCtrl.js"></script>
+<script src="/javascripts/controllers/ItemListCtrl.js"></script>
+<script src="/javascripts/controllers/ItemNewCtrl.js"></script>
 
 <footer>Lee Hankins</footer>
 </body>

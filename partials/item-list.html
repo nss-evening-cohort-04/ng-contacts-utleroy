@@ -1,0 +1,19 @@
+<div id="bg-img">
+	<div class="container-fluid center-block">
+		<div class="row center-block">
+			<div class="col-md-12 center-block">
+				<div class="panel-group center-block">
+					<div class="panel panel-default styled" ng-repeat="person in people">
+						<div class="panel-heading">
+							{{person.firstName}} {{person.lastName}}
+						</div>
+						<div class="panel-body">
+							{{person.phoneNumber}}<button class="btn btn-primary navbar-right fa fa-address-book-o"></button><button class="btn btn-danger fa fa-trash-o navbar-right" ng-click="deleteContact(person.personId)">
+						</button>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+</div>
