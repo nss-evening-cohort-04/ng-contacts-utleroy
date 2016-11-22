@@ -6,14 +6,9 @@ body {
 #bg-img {
   background: url("../iPhone-bg.png");
   background-repeat: no-repeat;
-  height: 100%;
-  width: auto;
-  margin-left: 450px; }
-
-.styled {
-  margin-top: 11%;
-  margin-left: 4%;
-  max-width: 28%; }
+  width: 75%;
+  height: auto;
+  background-size: contain; }
 
 .push {
   padding-top: 30px; }

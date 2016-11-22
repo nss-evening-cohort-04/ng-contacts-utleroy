@@ -7,15 +7,12 @@ body {
 #bg-img{
     background: url('../iPhone-bg.png');
     background-repeat: no-repeat;
-    height: 100%;
-    width: auto;
-    margin-left: 450px;
+    width: 75%;
+    height: auto;
+    background-size: contain;
 }
 
 .styled{
-	margin-top: 11%;
-	margin-left: 4%;
-	max-width: 28%;
 }
 
 .push{
