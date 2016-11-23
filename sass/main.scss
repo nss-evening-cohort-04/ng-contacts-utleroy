@@ -4,15 +4,14 @@ body {
 	background-color: grey;
 }
 
-#bg-img{
-    background: url('../iPhone-bg.png');
-    background-repeat: no-repeat;
-    width: 75%;
-    height: auto;
-    background-size: contain;
-}
 
-.styled{
+.bgStyle{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url('../iPhone-bg.png');
+	width: 100%;
+	height: auto;
+
 }
 
 .push{

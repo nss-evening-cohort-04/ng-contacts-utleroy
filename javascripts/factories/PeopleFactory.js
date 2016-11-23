@@ -21,12 +21,13 @@ app.factory("PeopleFactory", function($q, $http, FIREBASE_CONFIG) {
 
 	};
 
-	var deletePerson = function(personId){
+	var factoryDeletePerson = function(personId){
+		console.log("personId", personId)
 		return $q(function(resolve, reject){
 			$http
-			.delete(FIREBASE_CONFIG + personId)
-			.success(function(objectFromFirebase){
-				resolve(objectFromFirebase);
+			.delete(`${FIREBASE_CONFIG.databaseURL}/people/${personId}.json`)
+			.success(function(deleteResponse){
+				resolve(deleteResponse);
 			});
 		});
 	};
@@ -48,5 +49,5 @@ app.factory("PeopleFactory", function($q, $http, FIREBASE_CONFIG) {
 			});
 		});
 	};
-	return {getItemList:getItemList, postNewPerson:postNewPerson, deletePerson:deletePerson};
+	return {getItemList:getItemList, postNewPerson:postNewPerson, factoryDeletePerson:factoryDeletePerson};
 });

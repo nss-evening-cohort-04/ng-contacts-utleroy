@@ -66,7 +66,7 @@
 
 					<!-- existing contacts -->
 					<h3>Contacts</h3>
-					<div class="container-fluid">
+					<div class="container-fluid" ng-controller="ItemListCtrl"><!-- <img src="iPhone-bg.png"> -->
 						<div class="row">
 							<div class="panel-group">
 								<div class="panel panel-default styled col-xs-4 col-xs-offset-4"  ng-repeat="person in people">
@@ -74,13 +74,14 @@
 										{{person.firstName}} {{person.lastName}}
 									</div>
 									<div class="panel-body">
-										{{person.phoneNumber}}<button class="btn btn-primary navbar-right fa fa-address-book-o"></button><button class="btn btn-danger fa fa-trash-o navbar-right" ng-click="deleteContact(person.personId)">
+										{{person.phoneNumber}}<button class="btn btn-primary navbar-right fa fa-address-book-o"></button><button class="btn btn-danger fa fa-trash-o navbar-right" ng-click="deletePerson(person.id)">
 									</button>
 									</div>
 								</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 
 

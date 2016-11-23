@@ -3,12 +3,12 @@ body {
   width: 100%;
   background-color: grey; }
 
-#bg-img {
-  background: url("../iPhone-bg.png");
+.bgStyle {
   background-repeat: no-repeat;
-  width: 75%;
-  height: auto;
-  background-size: contain; }
+  background-size: contain;
+  background-image: url("../iPhone-bg.png");
+  width: 100%;
+  height: auto; }
 
 .push {
   padding-top: 30px; }

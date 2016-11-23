@@ -5,7 +5,7 @@ app.controller("ItemListCtrl", function($scope, PeopleFactory){
 	$scope.people = [];
 
 	let getPeople = function(){
-		ItemFactory.getItemList().then(function(fbItems) {
+		PeopleFactory.getItemList().then(function(fbItems) {
 			$scope.people = fbItems;
 		});
 	}
@@ -13,8 +13,8 @@ app.controller("ItemListCtrl", function($scope, PeopleFactory){
 	getPeople();
 
 	$scope.deletePerson = function(personId){
-		console.log("clicked");
-		PeopleFactory.deletePerson(personId).then(function(response){
+		console.log("clicked", personId);
+		PeopleFactory.factoryDeletePerson(personId).then(function(response){
 			getPeople();
 		});
 	};
